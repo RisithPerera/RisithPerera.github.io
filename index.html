@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Risith Perera — Software Engineer</title>
     <meta name="description" content="Risith Perera — Software Engineer. Projects, articles, experience and contact." />
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         // Tailwind config: extend fonts and colors
         tailwind.config = {
@@ -28,6 +30,7 @@
         .avatar { width: 96px; height: 96px; }
     </style>
 </head>
+
 <body class="min-h-screen bg-gray-50 text-gray-800 antialiased font-sans flex flex-col">
 <!-- NAV -->
 <header class="sticky top-0 bg-white/70 backdrop-blur border-b border-gray-200 z-40">
@@ -52,6 +55,7 @@
             </div>
         </nav>
     </div>
+
     <!-- mobile menu -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100">
         <div class="px-4 py-3 flex flex-col gap-2">
@@ -308,32 +312,6 @@
     </div>
 </footer>
 
-<!-- SMALL JS: mobile menu + project filtering + year -->
-<script>
-    // mobile menu toggle
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileBtn?.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // project filtering
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const filter = btn.getAttribute('data-filter');
-            // style active
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-indigo-600','text-white'));
-            btn.classList.add('bg-indigo-600','text-white');
-
-            document.querySelectorAll('#projectsGrid .project-card').forEach(card => {
-                if (filter === 'all') { card.style.display = 'block'; return; }
-                if (card.getAttribute('data-category') === filter) card.style.display = 'block'; else card.style.display = 'none';
-            });
-        });
-    });
-
-    // set year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script src="main.js"></script>
 </body>
 </html>
