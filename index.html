@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Risith Perera — Software Engineer</title>
+    <meta name="description" content="Risith Perera — Software Engineer. Projects, articles, experience and contact." />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind config: extend fonts and colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f7fafc',
+                            100: '#eef2ff',
+                            500: '#4f46e5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* small custom styles to keep things minimal */
+        .avatar { width: 96px; height: 96px; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800 antialiased font-sans flex flex-col">
+<!-- NAV -->
+<header class="sticky top-0 bg-white/70 backdrop-blur border-b border-gray-200 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between h-16">
+            <a href="#" class="flex items-center gap-3 text-lg font-semibold">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white">RP</div>
+                <span class="sr-only">Risith Perera</span>
+                <span class="hidden sm:inline">Risith Perera</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#about" class="hover:text-gray-900">About</a>
+                <a href="#experience" class="hover:text-gray-900">Experience</a>
+                <a href="#education" class="hover:text-gray-900">Education</a>
+                <a href="#projects" class="hover:text-gray-900">Projects</a>
+                <a href="#articles" class="hover:text-gray-900">Articles</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobileMenuBtn" aria-label="Open menu" class="p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100">
+        <div class="px-4 py-3 flex flex-col gap-2">
+            <a href="#about" class="py-2">About</a>
+            <a href="#experience" class="py-2">Experience</a>
+            <a href="#education" class="py-2">Education</a>
+            <a href="#projects" class="py-2">Projects</a>
+            <a href="#articles" class="py-2">Articles</a>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="flex-grow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- HERO / ABOUT -->
+        <section id="about" class="text-center mb-12">
+            <div class="inline-flex flex-col items-center gap-4">
+                <div class="avatar rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-3xl">👨‍💻</div>
+                <h1 class="text-3xl sm:text-4xl font-semibold">Risith Perera</h1>
+                <p class="text-gray-600">Software Engineer — Data Engineering · Backend · IT Security</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <!-- Social icons -->
+                    <a href="https://linkedin.com/in/risithperera" target="_blank" class="text-gray-600 hover:text-gray-900" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/risithperera" target="_blank" class="text-gray-600 hover:text-gray-900" aria-label="GitHub">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.hackerrank.com/risithperera" target="_blank" class="text-gray-600 hover:text-gray-900" aria-label="HackerRank">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm2.5 10.72l2.5-2.5V18.5h-9V5.5h9v2.22l-2.5 2.5 2.5 2.5zM8.5 9v6h3v-2.5h2v-1h-2V9h-3z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 max-w-2xl mx-auto text-left">
+                <div class="bg-white rounded-lg shadow p-5">
+                    <p>🎯 Software Engineer with 3+ years experience in Java backend development. Currently pursuing a Master's with focus on Data Engineering, Big Data and IT Security. I build scalable systems and enjoy solving challenging problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">💼 Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-lg shadow p-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Senior Backend Developer</h3>
+                            <p class="text-gray-500">Tech Company Name</p>
+                        </div>
+                        <time class="text-gray-400">2022 – Present</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">Built microservices serving 100k+ daily users. Led API design and performance improvements with a focus on reliability and observability.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Java</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Spring Boot</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Kafka</span>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow p-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Backend Developer</h3>
+                            <p class="text-gray-500">Previous Company</p>
+                        </div>
+                        <time class="text-gray-400">2021 – 2022</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">Built REST APIs and collaborated with cross-functional teams to deliver features. Focused on performance and clean architecture.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Java</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Docker</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">🎓 Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-lg shadow p-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Master of Science in Computer Science</h3>
+                            <p class="text-gray-500">University Name, Germany</p>
+                        </div>
+                        <time class="text-gray-400">2023 – Present</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">Focus: Data Engineering, Big Data, IT Security.</p>
+                </article>
+
+                <article class="bg-white rounded-lg shadow p-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Bachelor of Science in Computer Science</h3>
+                            <p class="text-gray-500">University Name</p>
+                        </div>
+                        <time class="text-gray-400">2017 – 2021</time>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">🚀 Projects</h2>
+
+            <!-- category buttons -->
+            <div class="flex gap-3 mb-6">
+                <button data-filter="all" class="filter-btn px-3 py-1 rounded bg-indigo-600 text-white text-sm">All</button>
+                <button data-filter="industry" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Industry</button>
+                <button data-filter="academic" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Academic</button>
+                <button data-filter="opensource" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Open Source / Self</button>
+            </div>
+
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- sample project (industry) -->
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="industry">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Distributed Data Processing Pipeline</h3>
+                            <p class="text-gray-500">Industry</p>
+                        </div>
+                        <time class="text-gray-400">2024</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">Scalable pipeline using Kafka & Spark to process real-time e-commerce events with data quality checks and monitoring.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Java</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Kafka</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Spark</span>
+                    </div>
+                    <div class="mt-4 flex gap-3">
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="#" target="_blank">GitHub</a>
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="#" target="_blank">Demo</a>
+                    </div>
+                </article>
+
+                <!-- sample project (academic) -->
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="academic">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Data Integration Research Tool</h3>
+                            <p class="text-gray-500">Academic</p>
+                        </div>
+                        <time class="text-gray-400">2025</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">Tool for schema interpretation and data profiling, helpful for research and class projects.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Scala</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Spark</span>
+                    </div>
+                    <div class="mt-4 flex gap-3">
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="#" target="_blank">Repo</a>
+                    </div>
+                </article>
+
+                <!-- sample open-source/self project -->
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="opensource">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">WhatsApp Chat Visualizer</h3>
+                            <p class="text-gray-500">Open Source / Self</p>
+                        </div>
+                        <time class="text-gray-400">2025</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">Desktop app to visualize exported WhatsApp chats, media, and statistics (Python + GUI).</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">GUI</span>
+                    </div>
+                    <div class="mt-4 flex gap-3">
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="#" target="_blank">GitHub</a>
+                    </div>
+                </article>
+
+                <!-- add more project cards here, keep data-category attribute for filtering -->
+            </div>
+        </section>
+
+        <!-- ARTICLES -->
+        <section id="articles" class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6">📝 Recent Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Article card example -->
+                <article class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="microservices" class="w-full h-40 object-cover">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="font-semibold mb-2">🏗️ Building Resilient Microservices: Lessons from Production</h3>
+                        <p class="text-gray-600 mb-4">Exploring patterns and practices for building fault-tolerant microservices including circuit breakers and graceful degradation.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>Published on Medium • LinkedIn</span>
+                            <span>8 min read</span>
+                        </div>
+                        <a href="https://medium.com/" target="_blank" class="mt-auto inline-block text-sm px-4 py-2 rounded bg-indigo-600 text-white">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="data security" class="w-full h-40 object-cover">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="font-semibold mb-2">🔐 Data Security in Modern Applications: A Practical Guide</h3>
+                        <p class="text-gray-600 mb-4">A guide to implementing data security measures in Java applications: encryption, secure coding and compliance.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>Published on Medium • LinkedIn</span>
+                            <span>12 min read</span>
+                        </div>
+                        <a href="https://medium.com/" target="_blank" class="mt-auto inline-block text-sm px-4 py-2 rounded bg-indigo-600 text-white">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1507646227500-3af75a4ecd5b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="migration story" class="w-full h-40 object-cover">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="font-semibold mb-2">🚀 From Monolith to Microservices: A Migration Story</h3>
+                        <p class="text-gray-600 mb-4">Lessons from migrating a legacy monolith to microservices using Spring Boot and Docker.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>Published on Medium • LinkedIn</span>
+                            <span>10 min read</span>
+                        </div>
+                        <a href="https://medium.com/" target="_blank" class="mt-auto inline-block text-sm px-4 py-2 rounded bg-indigo-600 text-white">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Add more article cards; two-column layout on md+ screens -->
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- FOOTER: pushed to bottom using flex layout -->
+<footer class="bg-white border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+            <div class="flex gap-3">
+                <a href="https://linkedin.com/in/risithperera" target="_blank" class="text-gray-600 hover:text-gray-900" aria-label="LinkedIn footer">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/risithperera" target="_blank" class="text-gray-600 hover:text-gray-900" aria-label="GitHub footer">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.hackerrank.com/risithperera" target="_blank" class="text-gray-600 hover:text-gray-900" aria-label="HackerRank footer">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm2.5 10.72l2.5-2.5V18.5h-9V5.5h9v2.22l-2.5 2.5 2.5 2.5zM8.5 9v6h3v-2.5h2v-1h-2V9h-3z"/></svg>
+                </a>
+            </div>
+            <p class="text-sm text-gray-500">&copy; <span id="year"></span> Risith Perera. Built with 💚</p>
+        </div>
+
+        <div class="text-sm text-gray-500">Want to connect? <a href="https://linkedin.com/in/risithperera" class="text-indigo-600 underline" target="_blank">Message me on LinkedIn</a></div>
+    </div>
+</footer>
+
+<!-- SMALL JS: mobile menu + project filtering + year -->
+<script>
+    // mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // project filtering
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const filter = btn.getAttribute('data-filter');
+            // style active
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-indigo-600','text-white'));
+            btn.classList.add('bg-indigo-600','text-white');
+
+            document.querySelectorAll('#projectsGrid .project-card').forEach(card => {
+                if (filter === 'all') { card.style.display = 'block'; return; }
+                if (card.getAttribute('data-category') === filter) card.style.display = 'block'; else card.style.display = 'none';
+            });
+        });
+    });
+
+    // set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
