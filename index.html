@@ -320,35 +320,53 @@
 
                 <!-- Competition Card -->
                 <article class="project-card bg-white rounded-lg shadow p-5">
-                    <div class="flex justify-between items-start">
+                    <!-- Carousel -->
+                    <div class="relative">
+                        <div class="overflow-hidden rounded-lg">
+                            <div class="flex transition-transform duration-500" id="carousel-comp1">
+                                <img src="photo1.jpg" class="w-full flex-shrink-0" alt="Competition photo 1">
+                                <img src="photo2.jpg" class="w-full flex-shrink-0" alt="Competition photo 2">
+                                <img src="photo3.jpg" class="w-full flex-shrink-0" alt="Competition photo 3">
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <button onclick="prevSlide('comp1')" class="absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full shadow p-1 text-gray-600 hover:text-black">‹</button>
+                        <button onclick="nextSlide('comp1')" class="absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full shadow p-1 text-gray-600 hover:text-black">›</button>
+                    </div>
+
+                    <!-- Title and Date -->
+                    <div class="flex justify-between items-start mt-4">
                         <div>
                             <h3 class="font-semibold">Global Hackathon 2023</h3>
                             <p class="text-gray-500">Berlin, Germany</p>
                         </div>
                         <time class="text-gray-400">Oct 2023</time>
                     </div>
+
+                    <!-- Description -->
                     <p class="mt-3 text-gray-600">
                         Developed a smart farming IoT solution in 48 hours. Won <span class="font-semibold">2nd place</span> among 50+ teams.
                     </p>
+
                     <!-- Tags -->
                     <div class="mt-3 flex flex-wrap gap-2">
                         <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
                         <span class="text-xs bg-gray-100 px-2 py-1 rounded">IoT</span>
                         <span class="text-xs bg-gray-100 px-2 py-1 rounded">AWS</span>
                     </div>
-                    <!-- Photos trigger -->
-                    <button onclick="openModal('comp1')" class="mt-3 text-sm text-indigo-600 hover:underline">
+
+                    <!-- View Photos Modal Trigger -->
+                    <button onclick="openModal('comp1-modal')" class="mt-3 text-sm text-indigo-600 hover:underline">
                         📷 View Photos
                     </button>
                 </article>
-
             </div>
         </section>
 
-        <!-- Modal for Photos -->
-        <div id="comp1" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+        <!-- Modal -->
+        <div id="comp1-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
             <div class="bg-white rounded-lg max-w-2xl w-full p-4 relative">
-                <button onclick="closeModal('comp1')" class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">&times;</button>
+                <button onclick="closeModal('comp1-modal')" class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">&times;</button>
                 <div class="space-y-4">
                     <img src="photo1.jpg" alt="Hackathon photo 1" class="rounded-lg">
                     <img src="photo2.jpg" alt="Hackathon photo 2" class="rounded-lg">
@@ -357,7 +375,26 @@
             </div>
         </div>
 
+        <!-- Carousel Script -->
         <script>
+            const carousels = {};
+
+            function nextSlide(id) {
+                if (!carousels[id]) carousels[id] = 0;
+                const container = document.getElementById('carousel-' + id);
+                const totalSlides = container.children.length;
+                carousels[id] = (carousels[id] + 1) % totalSlides;
+                container.style.transform = `translateX(-${carousels[id] * 100}%)`;
+            }
+
+            function prevSlide(id) {
+                if (!carousels[id]) carousels[id] = 0;
+                const container = document.getElementById('carousel-' + id);
+                const totalSlides = container.children.length;
+                carousels[id] = (carousels[id] - 1 + totalSlides) % totalSlides;
+                container.style.transform = `translateX(-${carousels[id] * 100}%)`;
+            }
+
             function openModal(id) {
                 document.getElementById(id).classList.remove('hidden');
             }
@@ -365,6 +402,7 @@
                 document.getElementById(id).classList.add('hidden');
             }
         </script>
+
 
         <!-- ARTICLES -->
         <section id="articles" class="mb-16">
