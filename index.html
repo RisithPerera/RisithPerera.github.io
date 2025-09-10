@@ -199,17 +199,39 @@
             <!-- category buttons -->
             <div class="flex gap-3 mb-6">
                 <button data-filter="all" class="filter-btn px-3 py-1 rounded bg-indigo-600 text-white text-sm">All</button>
-                <button data-filter="opensource" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Open Source / Self</button>
+<!--                <button data-filter="opensource" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Open Source / Self</button>-->
                 <button data-filter="industry" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Industry</button>
-                <button data-filter="academic" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Academic</button>
+                <button data-filter="master" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Master's</button>
+                <button data-filter="bachelor" class="filter-btn px-3 py-1 rounded bg-gray-100 text-sm">Bachelor's</button>
             </div>
 
             <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <article class="project-card bg-white rounded-lg shadow p-5" data-category="academic">
+
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="master">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Multi-Label Emotion Detection with DistilBERT</h3>
+                            <p class="text-gray-500">Master's</p>
+                        </div>
+                        <time class="text-gray-400">May 2025 - Jul 2025</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">
+                        Built a multi-label emotion classifier for text detecting anger, fear, joy, sadness, and surprise. Cleaned and balanced an imbalanced dataset, applied lexicon-based augmentation, explored classical ML models as baselines, fine-tuned pre-trained transformers (DistilBERT, RoBERTa, DeBERTa), and selected DistilBERT for best performance. Implemented a predict function for CSV input and multi-label outputs.
+                    </p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">PyTorch</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">NumPy</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Pandas</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Hugging Face</span>
+                    </div>
+                </article>
+
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="master">
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="font-semibold">ADAPT: App for Digital Anxiety Prevention Tools</h3>
-                            <p class="text-gray-500">Academic</p>
+                            <p class="text-gray-500">Master's</p>
                         </div>
                         <time class="text-gray-400">Apr 2024 - Present</time>
 
@@ -228,6 +250,25 @@
                     </div>
                     <div class="mt-4 flex gap-3">
                         <a class="text-sm inline-block px-3 py-1 border rounded" href="https://adapt.online.uni-marburg.de/" target="_blank">Website</a>
+                    </div>
+                </article>
+
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="master">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Inclusion Dependency Discovery in Akka</h3>
+                            <p class="text-gray-500">Master's</p>
+                        </div>
+                        <time class="text-gray-400">Nov 2024 - Jan 2025</time>
+                    </div>
+                    <p class="mt-3 text-gray-600">
+                        Built a distributed Akka-based system to discover unary inclusion dependencies (INDs) on TPCH datasets using a 12-node Raspberry Pi cluster. Designed dynamic batch distribution, transformed row batches into columnar format, implemented column merging across nodes, optimized comparisons, and added fault-tolerant batch handling to maximize resource utilization and scalability.
+                    </p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Java</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Akka</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">Actor Programming</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">VisualVM</span>
                     </div>
                 </article>
 
@@ -278,43 +319,52 @@
                     </p>
                 </article>
 
-                <article class="project-card bg-white rounded-lg shadow p-5" data-category="academic">
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="bachelor">
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="font-semibold">Adaptive People Movement and Action Prediction Using CCTV (Final Year Research)</h3>
-                            <p class="text-gray-500">Academic</p>
+                            <p class="text-gray-500">Bachelor's</p>
                         </div>
                         <time class="text-gray-400">Jul 2020 – Apr 2021</time>
                     </div>
                     <p class="mt-3 text-gray-600">
                         Developed an adaptive system to predict and control domestic appliances via CCTV video streams based on routine behaviors.
                     </p>
+                    <div class="mt-4 flex gap-3">
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="https://cepdnaclk.github.io/e15-4yp-Adaptive-people-movement-and-action-prediction-using-CCTV-to-control-appliances/" target="_blank">Project Page</a>
+                    </div>
                 </article>
 
-                <article class="project-card bg-white rounded-lg shadow p-5" data-category="academic">
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="bachelor">
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="font-semibold">"Sanasa" Bank Management System (Software Engineering Project)</h3>
-                            <p class="text-gray-500">Academic</p>
+                            <p class="text-gray-500">Bachelor's</p>
                         </div>
                         <time class="text-gray-400">Jun 2020 – Aug 2020</time>
                     </div>
                     <p class="mt-3 text-gray-600">
                         Developed bank member and transaction management tool using JavaFX and MySQL with monolithic architecture.
                     </p>
+                    <div class="mt-4 flex gap-3">
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="https://cepdnaclk.github.io/e15-co328-Banking-Management-System/" target="_blank">Project Page</a>
+                    </div>
                 </article>
 
-                <article class="project-card bg-white rounded-lg shadow p-5" data-category="academic">
+                <article class="project-card bg-white rounded-lg shadow p-5" data-category="bachelor">
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="font-semibold">EzWaste - Efficient Way of Waste Collection (Embedded System Project)</h3>
-                            <p class="text-gray-500">Academic</p>
+                            <p class="text-gray-500">Bachelor's</p>
                         </div>
                         <time class="text-gray-400">Jul 2019 – Nov 2019</time>
                     </div>
                     <p class="mt-3 text-gray-600">
                         Created a system with embedded tech and admin/mobile apps to optimize urban waste collection routes.
                     </p>
+                    <div class="mt-4 flex gap-3">
+                        <a class="text-sm inline-block px-3 py-1 border rounded" href="https://cepdnaclk.github.io/e15-3yp-An-Efficient-System-For-Waste-Collection/" target="_blank">Project Page</a>
+                    </div>
                 </article>
             </div>
         </section>
